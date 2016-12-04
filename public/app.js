@@ -23741,7 +23741,8 @@ var App = function (_React$Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      var url = 'https://cors-anywhere.herokuapp.com/http://www.trivialbuzz.com/api/v1/rounds/1.json';
+      var randomNumber = Math.floor(Math.random() * 100);
+      var url = 'https://cors-anywhere.herokuapp.com/http://www.trivialbuzz.com/api/v1/rounds/' + randomNumber + '.json';
 
       _superagent2.default.get(url, function (err, res) {
         _this2.organizeRound(res.body.round);
@@ -23898,7 +23899,7 @@ var Scoreboard = function Scoreboard(props) {
 
   for (var cat in props.round) {
     if (count < 5) {
-      categories.push(_react2.default.createElement(_category2.default, { name: cat, updateScore: props.updateScore, questions: props.round[cat] }));
+      categories.push(_react2.default.createElement(_category2.default, { name: cat, key: count, updateScore: props.updateScore, questions: props.round[cat] }));
     }
     count++;
   }

@@ -9,7 +9,7 @@ const Scoreboard = (props) => {
 
   for (let cat in props.round) {
     if (count < 5) {
-      categories.push(<Category name={cat} updateScore={props.updateScore} questions={props.round[cat]} />);
+      categories.push(<Category name={cat} key={count} updateScore={props.updateScore} questions={props.round[cat]} />);
     }
     count++;
   }

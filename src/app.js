@@ -36,7 +36,8 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    const url = `https://cors-anywhere.herokuapp.com/http://www.trivialbuzz.com/api/v1/rounds/1.json`
+    const randomNumber = Math.floor(Math.random() * 100);
+    const url = `https://cors-anywhere.herokuapp.com/http://www.trivialbuzz.com/api/v1/rounds/${randomNumber}.json`
 
     request.get(url, (err,res) => {
       this.organizeRound(res.body.round);
