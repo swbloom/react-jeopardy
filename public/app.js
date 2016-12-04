@@ -23741,7 +23741,7 @@ var App = function (_React$Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      var url = 'http://www.trivialbuzz.com/api/v1/rounds/1.json';
+      var url = 'https://cors-anywhere.herokuapp.com/http://www.trivialbuzz.com/api/v1/rounds/1.json';
 
       _superagent2.default.get(url, function (err, res) {
         _this2.organizeRound(res.body.round);
