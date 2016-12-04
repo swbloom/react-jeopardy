@@ -1,0 +1,48 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #1478dd;
+  font-family: Helvetica;
+  text-shadow: 2px 2px #000;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category {
+  border-left-width: 1px solid #000;
+  min-height: 100vh;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  width: 20%;
+  border-right: solid 1px #000;
+}
+.category-title {
+  min-height: 50px;
+}
+.category ul {
+  margin: 0;
+  padding: 0;
+}
+.category ul li {
+  list-style-type: none;
+  padding: 50px;
+  font-size: 30px;
+  color: yellow;
+  cursor: pointer;
+}
+
+.score {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: red;
+  font-size: 30px;
+}
+
+.category ul li.question--inactive {
+  color: grey;
+}
